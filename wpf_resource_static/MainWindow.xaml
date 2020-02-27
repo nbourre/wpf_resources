@@ -1,0 +1,22 @@
+﻿<Window x:Class="wpf_resource_static.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_resource_static"
+        xmlns:system="clr-namespace:System;assembly=System.Runtime"
+        mc:Ignorable="d"
+        Title="Ressource statique simple" Height="150" Width="550">
+    <Window.Resources>
+        <system:String x:Key="strHelloWorld">Bonjour, le monde!</system:String>
+    </Window.Resources>
+    <StackPanel Margin="10">
+        <TextBlock TextAlignment="Center"
+                   FontSize="56"
+                   Text="{StaticResource strHelloWorld}" />
+        <TextBlock TextAlignment="Center">
+            Juste une autre exemple "<TextBlock Text="{StaticResource strHelloWorld}" />", 
+            mais avec des ressources!
+        </TextBlock>
+    </StackPanel>
+</Window>
