@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:wpf_E_ressource_dictionnaire"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+        <Rectangle Margin="15" Width="120" Height="120" StrokeThickness="2"
+                    Fill="{StaticResource GreenBrush}"/>
+        <Rectangle Margin="15" Width="120" Height="120" StrokeThickness="2"
+                    Fill="{DynamicResource RedBrush}"/>
 
-    </Grid>
+        <Button x:Name="ChangeColor" Click="ChangeColor_Click"
+                Content="Changer la couleur" Height="60" Width="150"/>
+    </StackPanel>
 </Window>

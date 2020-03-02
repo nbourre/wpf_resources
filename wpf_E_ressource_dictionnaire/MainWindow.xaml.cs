@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
+﻿using System.Windows;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace wpf_E_ressource_dictionnaire
 {
@@ -23,6 +11,13 @@ namespace wpf_E_ressource_dictionnaire
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ChangeColor_Click(object sender, RoutedEventArgs e)
+        {
+            Color blue = (Color)Application.Current.Resources["BlueColour"];
+            Application.Current.Resources["GreenBrush"] 
+                = new SolidColorBrush(blue);
         }
     }
 }
